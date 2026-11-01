@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/wailsapp/wails/v3 v3.0.0
-	golang.org/x/sys v0.48.0
+	golang.org/x/sys v0.49.0
 )
 
 require (
