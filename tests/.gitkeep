@@ -1,0 +1,2 @@
+# 集成 / E2E 测试预留目录。
+# Go 单元测试与源码同目录（*_test.go，Go 惯例），前端单测在 frontend/src/tests/。

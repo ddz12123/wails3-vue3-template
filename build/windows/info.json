@@ -1,0 +1,15 @@
+{
+	"fixed": {
+		"file_version": "0.1.0"
+	},
+	"info": {
+		"0409": {
+			"ProductVersion": "0.1.0",
+			"CompanyName": "Example Company",
+			"FileDescription": "Wails 3 + Vue 3 + TypeScript + Element Plus 桌面应用模板",
+			"LegalCopyright": "© 2026, Example Company",
+			"ProductName": "Wails3 Vue3 Template",
+			"Comments": "Desktop application built with Wails 3 and Vue 3"
+		}
+	}
+}

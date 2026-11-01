@@ -1,0 +1,10 @@
+{
+  // 构建配置专用：允许使用 Node API（与应用代码的 DOM 环境隔离）
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts"]
+}

@@ -1,0 +1,52 @@
+.task
+bin
+temp
+
+# 系统 / 编辑器 / 日志
+.DS_Store
+Thumbs.db
+*.log
+*.exe
+.idea/
+# 模板自带的编辑器配置需要纳入版本管理，仅忽略本地覆盖文件
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+# dist 为构建产物，只保留占位文件，避免 Go embed 在未构建时找不到目录
+frontend/dist/*
+!frontend/dist/.gitkeep
+frontend/node_modules
+frontend/.env.local
+frontend/.env.*.local
+frontend/coverage
+*.tsbuildinfo
+*.syso
+.pnpm-store
+build/linux/appimage/build
+build/windows/nsis/MicrosoftEdgeWebview2Setup.exe
+# Mobile generated (per-machine; overlays hold absolute paths)
+build/ios/xcode/overlay.json
+build/ios/xcode/gen/
+build/android/overlay.json
+build/android/gen/
+
+# AI 工具本地状态（会话记录、hook 状态，因人而异；如需共享项目级配置可自行放行）
+.mimosa/
+.codebuddy/
+.zcode/
+
+# Go 调试 / 测试产物（delve、pprof、go test -c、coverprofile）
+*.test
+*.out
+*.prof
+__debug_bin*
+
+# Android 构建缓存与产物（gradle 构建自动生成）
+build/android/.gradle/
+build/android/build/
+build/android/app/build/
+build/android/app/src/main/jniLibs/
+build/android/local.properties
+
+# iOS 真机调试输出（wails3 task ios:run:device 默认 DERIVED 指到这里）
+build/ios/DerivedData/

@@ -1,0 +1,173 @@
+/* ==========================================================================
+   应用基础变量
+   Element Plus 主色变量（--el-color-primary*）由 utils/color.ts 在运行时写入
+   ========================================================================== */
+:root {
+  --app-bg-color: #f5f7fa;
+  --app-card-color: #ffffff;
+  --app-text-color: #1f2d3d;
+  --app-text-color-secondary: #606266;
+  --app-border-color: #e4e7ed;
+  --app-primary-color: #409eff;
+  --app-primary-color-rgb: 64, 158, 255;
+  --app-radius: 14px;
+  --app-max-width: 1080px;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --app-transition: 0.24s var(--ease-out);
+
+  color-scheme: light;
+}
+
+html.dark {
+  --app-bg-color: #141414;
+  --app-card-color: #1d1e1f;
+  --app-text-color: #e5eaf3;
+  --app-text-color-secondary: #a3a6ad;
+  --app-border-color: #363637;
+
+  color-scheme: dark;
+}
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'PingFang SC',
+    'Hiragino Sans GB',
+    'Microsoft YaHei',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--app-text-color);
+  background-color: var(--app-bg-color);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--app-primary-color);
+  text-decoration: none;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 0.92em;
+  color: var(--app-primary-color);
+  background: color-mix(in srgb, var(--app-primary-color) 10%, transparent);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   路由过渡
+   ========================================================================== */
+.fade-enter-active,
+.fade-leave-active {
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s var(--ease-out);
+}
+
+.fade-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   NProgress
+   ========================================================================== */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--app-primary-color) !important;
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--app-primary-color),
+    0 0 5px var(--app-primary-color) !important;
+}
+
+/* ==========================================================================
+   滚动条
+   ========================================================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--app-text-color) 18%, transparent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--app-text-color) 30%, transparent);
+}
+
+/* ==========================================================================
+   无障碍：尊重系统减弱动效设置
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

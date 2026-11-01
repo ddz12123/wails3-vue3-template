@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Wails3 Vue3 Template
+Comment=Wails 3 + Vue 3 + TypeScript + Element Plus 桌面应用
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/wails3-vue3-template %u
+Terminal=false
+Type=Application
+Icon=wails3-vue3-template
+Categories=Utility;
+StartupWMClass=wails3-vue3-template
+
+ 
